@@ -1,0 +1,55 @@
+{
+  "name": "@intuitui-labs/a11y-gate",
+  "version": "0.1.0",
+  "description": "Mathematical accessibility, APCA contrast, Color Vision Deficiency (CVD) simulation, and spatial harmony CI gate for design systems.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/styles",
+    "README.md",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./styles/*": "./src/styles/*"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "check-types": "tsc --noEmit"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "wcag3",
+    "apca",
+    "contrast",
+    "color-vision-deficiency",
+    "deuteranopia",
+    "protanopia",
+    "design-tokens",
+    "spatial-grid",
+    "fluid-typography"
+  ],
+  "author": "Intuitui Labs & Neev Foundation",
+  "license": "MIT",
+  "peerDependencies": {
+    "vitest": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vitest": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitest": ">=1.0.0"
+  }
+}
